@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zhaniya — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Particle canvas -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav" id="nav">
+    <div class="nav__logo">
+      <div class="nav__logo-icon">✦</div>
+      <span class="nav__logo-first">Zhaniya</span>
+      <span class="nav__logo-last">Hub</span>
+    </div>
+    <button class="nav__burger" id="burger" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#about"    class="nav__link">О себе</a></li>
+      <li><a href="#goal"     class="nav__link">Цель</a></li>
+      <li><a href="#story"    class="nav__link">История</a></li>
+      <li><a href="#mentor"   class="nav__link">Ментор</a></li>
+      <li><a href="#progress" class="nav__link">Прогресс</a></li>
+      <li><a href="#hobbies"  class="nav__link">Хобби</a></li>
+      <li><a href="#works"    class="nav__link">Работы</a></li>
+      <li><a href="#github"   class="nav__link nav__link--cta">GitHub</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero section" id="about">
+      <div class="hero__bg-grid"></div>
+
+      <!-- Glowing orbs -->
+      <div class="hero__orb hero__orb--1"></div>
+      <div class="hero__orb hero__orb--2"></div>
+
+      <!-- Butterflies (SVG inline) -->
+      <div class="butterfly butterfly--tl" aria-hidden="true">
+        <svg viewBox="0 0 80 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="20" cy="25" rx="18" ry="12" fill="url(#bfly1)" opacity="0.85"/>
+          <ellipse cx="60" cy="25" rx="18" ry="12" fill="url(#bfly1)" opacity="0.85"/>
+          <ellipse cx="22" cy="40" rx="12" ry="8" fill="url(#bfly2)" opacity="0.7"/>
+          <ellipse cx="58" cy="40" rx="12" ry="8" fill="url(#bfly2)" opacity="0.7"/>
+          <path d="M40 20 Q40 30 40 45" stroke="#e879f9" stroke-width="1.5" stroke-linecap="round"/>
+          <defs>
+            <linearGradient id="bfly1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#c084fc"/>
+              <stop offset="100%" stop-color="#818cf8"/>
+            </linearGradient>
+            <linearGradient id="bfly2" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#e879f9"/>
+              <stop offset="100%" stop-color="#a855f7"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="butterfly butterfly--tr" aria-hidden="true">
+        <svg viewBox="0 0 80 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="20" cy="25" rx="16" ry="11" fill="url(#bfly3)" opacity="0.8"/>
+          <ellipse cx="60" cy="25" rx="16" ry="11" fill="url(#bfly3)" opacity="0.8"/>
+          <ellipse cx="22" cy="38" rx="10" ry="7" fill="url(#bfly4)" opacity="0.65"/>
+          <ellipse cx="58" cy="38" rx="10" ry="7" fill="url(#bfly4)" opacity="0.65"/>
+          <path d="M40 20 Q40 28 40 42" stroke="#c084fc" stroke-width="1.5" stroke-linecap="round"/>
+          <defs>
+            <linearGradient id="bfly3" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#a855f7"/>
+              <stop offset="100%" stop-color="#7c3aed"/>
+            </linearGradient>
+            <linearGradient id="bfly4" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#c084fc"/>
+              <stop offset="100%" stop-color="#e879f9"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="butterfly butterfly--br" aria-hidden="true">
+        <svg viewBox="0 0 80 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="20" cy="25" rx="18" ry="13" fill="url(#bfly5)" opacity="0.75"/>
+          <ellipse cx="60" cy="25" rx="18" ry="13" fill="url(#bfly5)" opacity="0.75"/>
+          <ellipse cx="22" cy="42" rx="12" ry="8" fill="url(#bfly6)" opacity="0.6"/>
+          <ellipse cx="58" cy="42" rx="12" ry="8" fill="url(#bfly6)" opacity="0.6"/>
+          <path d="M40 20 Q40 31 40 48" stroke="#818cf8" stroke-width="1.5" stroke-linecap="round"/>
+          <defs>
+            <linearGradient id="bfly5" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#818cf8"/>
+              <stop offset="100%" stop-color="#c084fc"/>
+            </linearGradient>
+            <linearGradient id="bfly6" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#a855f7"/>
+              <stop offset="100%" stop-color="#e879f9"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <!-- Sparkles -->
+      <span class="sparkle" style="top:18%;left:42%;" aria-hidden="true">✦</span>
+      <span class="sparkle" style="top:60%;right:20%;" aria-hidden="true">✦</span>
+      <span class="sparkle" style="top:75%;left:15%;" aria-hidden="true">✦</span>
+
+      <div class="container hero__inner">
+        <div class="hero__badge">
+          <span class="badge-dot"></span>
+          Async learning + opportunities, in one place
+        </div>
+
+        <h1 class="hero__headline">
+          Discover <span class="grad">opportunities.</span><br/>
+          Learn at your own pace.
+        </h1>
+
+        <p class="hero__bio">
+          Привет! Я <strong>Zhaniya</strong> — начинающий веб-разработчик из Тараза. Учусь, создаю, 
+          исследую. Каждый проект — новый уровень. Рада видеть тебя здесь!
+        </p>
+
+        <div class="hero__facts">
+          <div class="fact-card">
+            <span class="fact-card__num">16</span>
+            <span class="fact-card__label">лет</span>
+          </div>
+          <div class="fact-card">
+            <span class="fact-card__num">6+</span>
+            <span class="fact-card__label">месяцев в IT</span>
+          </div>
+          <div class="fact-card">
+            <span class="fact-card__num">∞</span>
+            <span class="fact-card__label">желания учиться</span>
+          </div>
+        </div>
+
+        <div class="hero__cta-row">
+          <a href="#works" class="btn btn--primary">
+            Find Opportunities →
+          </a>
+          <a href="#story" class="btn btn--dark">Start Learning</a>
+          <a href="#goal"  class="btn btn--outline">Join Zhaniya</a>
+        </div>
+
+        <p class="hero__role">
+          <span class="type-cursor" id="typedRole"></span>
+        </p>
+      </div>
+
+      <div class="scroll-hint">
+        <div class="scroll-hint__line"></div>
+      </div>
+    </section>
+
+    <!-- ===== МОЯ ЦЕЛЬ ===== -->
+    <section class="section goal-section" id="goal">
+      <div class="hero__orb hero__orb--3"></div>
+      <div class="container">
+        <div class="section-label">
+          <span class="section-label__tag">02</span>
+          <span class="section-label__text">Моя цель</span>
+        </div>
+        <div class="goal__layout">
+          <div class="goal__text-col">
+            <h2 class="section-title">Зачем я здесь <br/><em>и куда иду</em></h2>
+            <p class="body-text">
+              Я пришла в программирование, потому что хочу создавать — а не просто использовать. 
+              Каждый сайт начинался со строчки кода, и теперь я умею писать эти строчки сама.
+            </p>
+            <p class="body-text">
+              Моя цель — стать Middle Frontend-разработчиком, работать над реальными продуктами. 
+              Через год — первый коммерческий проект. Через три — собственный стартап.
+            </p>
+          </div>
+          <div class="goal__visual-col">
+            <div class="roadmap">
+              <div class="roadmap__item active">
+                <div class="roadmap__dot"></div>
+                <div class="roadmap__content">
+                  <span class="roadmap__year">Сейчас</span>
+                  <span class="roadmap__desc">Учусь, строю портфолио</span>
+                </div>
+              </div>
+              <div class="roadmap__item">
+                <div class="roadmap__dot"></div>
+                <div class="roadmap__content">
+                  <span class="roadmap__year">2026</span>
+                  <span class="roadmap__desc">Первый фриланс-проект</span>
+                </div>
+              </div>
+              <div class="roadmap__item">
+                <div class="roadmap__dot"></div>
+                <div class="roadmap__content">
+                  <span class="roadmap__year">2027</span>
+                  <span class="roadmap__desc">Junior-разработчик в компании</span>
+                </div>
+              </div>
+              <div class="roadmap__item">
+                <div class="roadmap__dot"></div>
+                <div class="roadmap__content">
+                  <span class="roadmap__year">2028</span>
+                  <span class="roadmap__desc">Middle+ и собственные продукты</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ИСТОРИЯ ===== -->
+    <section class="section story-section" id="story">
+      <div class="hero__orb hero__orb--4"></div>
+      <div class="container">
+        <div class="section-label">
+          <span class="section-label__tag">03</span>
+          <span class="section-label__text">Как я пришла в IT</span>
+        </div>
+        <h2 class="section-title">Моя история</h2>
+        <div class="story__timeline">
+          <div class="story__entry reveal">
+            <div class="story__entry-icon">💡</div>
+            <div class="story__entry-body">
+              <h3>Первое знакомство</h3>
+              <p>Всё началось, когда я попыталась изменить дизайн любимого сайта через DevTools. 
+              Цвет поменялся — и в этот момент я поняла: интернет можно переписывать.</p>
+            </div>
+          </div>
+          <div class="story__entry reveal">
+            <div class="story__entry-icon">🎮</div>
+            <div class="story__entry-body">
+              <h3>Игры и код</h3>
+              <p>Я много играла и всегда думала — как это сделано? Это любопытство привело меня 
+              к YouTube, потом к курсам, потом к первому «Hello, World!».</p>
+            </div>
+          </div>
+          <div class="story__entry reveal">
+            <div class="story__entry-icon">🚀</div>
+            <div class="story__entry-body">
+              <h3>CapEducation и серьёзный старт</h3>
+              <p>Когда попала на курс CapEducation, всё стало системным. Figma, HTML, CSS, JS — 
+              каждый модуль открывал новый уровень. Теперь это не хобби — это путь.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== МЕНТОР ===== -->
+    <section class="section mentor-section" id="mentor">
+      <div class="hero__orb hero__orb--5"></div>
+      <div class="container">
+        <div class="section-label">
+          <span class="section-label__tag">04</span>
+          <span class="section-label__text">Ментор</span>
+        </div>
+        <h2 class="section-title">Мой <em>наставник</em></h2>
+        <div class="mentor__card reveal">
+          <div class="mentor__avatar">🧑‍💻</div>
+          <div class="mentor__info">
+            <p class="mentor__name">Айдос Сейткали</p>
+            <p class="mentor__role">Senior Frontend Developer · CapEducation</p>
+            <p class="mentor__quote">Она учится с огромным желанием. Видно, что каждый урок — не просто задание, 
+            а кирпичик в будущем, которое она уже строит.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ПРОГРЕСС ===== -->
+    <section class="section progress-section" id="progress">
+      <div class="container">
+        <div class="section-label">
+          <span class="section-label__tag">05</span>
+          <span class="section-label__text">Прогресс</span>
+        </div>
+        <h2 class="section-title">Точка <em>А → Б</em></h2>
+        <div class="progress__compare reveal">
+          <div class="progress__col">
+            <div class="progress__col-header">
+              <span class="progress__col-tag tag--a">Точка А</span>
+              <span class="progress__col-subtitle">Начало</span>
+            </div>
+            <ul class="progress__list">
+              <li>Не знала что такое HTML</li>
+              <li>Боялась консоли браузера</li>
+              <li>GitHub казался сложным</li>
+              <li>Думала, что дизайн — не моё</li>
+            </ul>
+          </div>
+          <div class="progress__divider">
+            <div class="progress__divider-line"></div>
+            <div class="progress__divider-arrow">→</div>
+            <div class="progress__divider-line"></div>
+          </div>
+          <div class="progress__col">
+            <div class="progress__col-header">
+              <span class="progress__col-tag tag--b">Точка Б</span>
+              <span class="progress__col-subtitle">Сейчас</span>
+            </div>
+            <ul class="progress__list">
+              <li>Верстаю семантически и доступно</li>
+              <li>Flexbox и Grid — в крови</li>
+              <li>Пишу JS: DOM, события, Fetch</li>
+              <li>Проектирую макеты в Figma</li>
+              <li>Деплою на GitHub Pages</li>
+            </ul>
+          </div>
+        </div>
+        <div class="skills-bars reveal">
+          <div class="skill-bar">
+            <div class="skill-bar__label"><span>HTML / CSS</span><span class="skill-bar__pct">85%</span></div>
+            <div class="skill-bar__track"><div class="skill-bar__fill" style="--w:85%"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar__label"><span>JavaScript</span><span class="skill-bar__pct">60%</span></div>
+            <div class="skill-bar__track"><div class="skill-bar__fill" style="--w:60%"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar__label"><span>Figma</span><span class="skill-bar__pct">70%</span></div>
+            <div class="skill-bar__track"><div class="skill-bar__fill" style="--w:70%"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar__label"><span>Git / GitHub</span><span class="skill-bar__pct">65%</span></div>
+            <div class="skill-bar__track"><div class="skill-bar__fill" style="--w:65%"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ХОББИ ===== -->
+    <section class="section hobbies-section" id="hobbies">
+      <div class="hero__orb hero__orb--6"></div>
+      <div class="container">
+        <div class="section-label">
+          <span class="section-label__tag">06</span>
+          <span class="section-label__text">Хобби и интересы</span>
+        </div>
+        <h2 class="section-title">Вне <em>экрана</em></h2>
+        <div class="hobbies__grid">
+          <div class="hobby-card reveal">
+            <div class="hobby-card__icon">🎵</div>
+            <h3 class="hobby-card__title">Музыка</h3>
+            <p class="hobby-card__desc">Слушаю всё: от lo-fi до метала. Иногда сама что-то собираю в GarageBand.</p>
+          </div>
+          <div class="hobby-card reveal">
+            <div class="hobby-card__icon">🎮</div>
+            <h3 class="hobby-card__title">Игры</h3>
+            <p class="hobby-card__desc">Не просто играю — разбираю механики и думаю как бы это запрограммировала.</p>
+          </div>
+          <div class="hobby-card reveal">
+            <div class="hobby-card__icon">📸</div>
+            <h3 class="hobby-card__title">Фотография</h3>
+            <p class="hobby-card__desc">Люблю уличную съёмку. Учит видеть композицию — помогает в дизайне.</p>
+          </div>
+          <div class="hobby-card reveal">
+            <div class="hobby-card__icon">📚</div>
+            <h3 class="hobby-card__title">Книги</h3>
+            <p class="hobby-card__desc">Читаю про технологии, психологию и sci-fi. Сейчас — «Чистый код» Мартина.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== РАБОТЫ ===== -->
+    <section class="section works-section" id="works">
+      <div class="container">
+        <div class="section-label">
+          <span class="section-label__tag">07</span>
+          <span class="section-label__text">Мои работы</span>
+        </div>
+        <h2 class="section-title">Лучшие <em>проекты</em></h2>
+        <div class="works__grid">
+          <article class="work-card reveal">
+            <div class="work-card__preview">
+              <div class="work-card__preview-bg">
+                <span class="work-card__preview-icon">🌐</span>
+              </div>
+              <div class="work-card__overlay">
+                <a href="https://www.figma.com/design/eFmWEeqSbcGpJc5dyyRGuK/Untitled?m=auto&t=kvDFwjzDkSm3kmqw-6" class="work-card__link" target="_blank">Смотреть →</a>
+              </div>
+            </div>
+            <div class="work-card__body">
+              <span class="work-card__tag">Figma</span>
+              <h3 class="work-card__title">Лендинг кофейни</h3>
+              <p class="work-card__desc">Адаптивный лендинг. Первый самостоятельный проект.</p>
+            </div>
+          </article>
+
+          <article class="work-card reveal">
+            <div class="work-card__preview">
+              <div class="work-card__preview-bg work-card__preview-bg--2">
+                <span class="work-card__preview-icon">🎨</span>
+              </div>
+              <div class="work-card__overlay">
+                <a href="https://mentoria-deploy-delta.vercel.app/" class="work-card__link" target="_blank">Смотреть →</a>
+              </div>
+            </div>
+            <div class="work-card__body">
+              <span class="work-card__tag">Next.js</span>
+              <h3 class="work-card__title">Платформа для учеников 8–11 классов</h3>
+              <p class="work-card__desc">Все образовательные возможности — в одном месте.</p>
+            </div>
+          </article>
+
+          <article class="work-card reveal">
+            <div class="work-card__preview">
+              <div class="work-card__preview-bg work-card__preview-bg--3">
+                <span class="work-card__preview-icon">⚡</span>
+              </div>
+              <div class="work-card__overlay">
+                <a href="https://up-zone.vercel.app/" class="work-card__link" target="_blank">Смотреть →</a>
+              </div>
+            </div>
+            <div class="work-card__body">
+              <span class="work-card__tag">HTML/CSS/JavaScript</span>
+              <h3 class="work-card__title">Платформа для фрилансеров</h3>
+              <p class="work-card__desc">Место где идеи становятся проектами.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GITHUB ===== -->
+    <section class="section github-section" id="github">
+      <div class="hero__orb hero__orb--1"></div>
+      <div class="container github__inner">
+        <div class="github__text">
+          <div class="section-label">
+            <span class="section-label__tag">08</span>
+            <span class="section-label__text">GitHub</span>
+          </div>
+          <h2 class="section-title">Весь <em>код здесь</em></h2>
+          <p class="body-text">
+            Все проекты залиты с осмысленной историей коммитов. 
+            README на каждом репозитории, структурированный код и документация.
+          </p>
+          <a href="https://github.com/janyanurlan" target="_blank" rel="noopener" class="btn btn--primary btn--github">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            <span>github.com/janyanurlan</span>
+          </a>
+        </div>
+        <div class="github__stats reveal">
+          <div class="github-stat">
+            <span class="github-stat__num" data-count="5">0</span>
+            <span class="github-stat__label">репозиториев</span>
+          </div>
+          <div class="github-stat">
+            <span class="github-stat__num" data-count="23">0</span>
+            <span class="github-stat__label">коммитов</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__copy">— сделано с 💜 и JavaScript · Zhaniya Hub</span>
+      <a href="#about" class="footer__top">↑ Наверх</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
